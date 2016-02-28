@@ -1,15 +1,37 @@
 <template name="settingsPage">
-    SETTINGS PAGE
+    <div class="page auth">
+    <div class="content-scrollable">
+        <div class="wrapper-auth">
+            <h1 class="title-auth">Settings Page</h1>
+            <p class="subtitle-auth" >This is the settings page where you configure all your social media settings</p>
 
-    <table class="table">
-        <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip</th>
-            <th>Phone</th>
-        </tr>
+            <form>
+                {{#if errorMessages}}
+                    <div class="list-errors">
+                        {{#each errorMessages}}
+                            <div class="list-item">{{this}}</div>
+                        {{/each}}
+                    </div>
+                {{/if}}
 
-    </table>
+                <div class="input-symbol">
+                    <input type="text" name="Facebook" placeholder="Facebook" />
+                    <span class="icon-email" title="Your Email"></span>
+                </div>
+                <br>
+                <div class="input-symbol">
+                    <input type="text" name="twitter" placeholder="Twitter" />
+                    <span class="icon-lock" title="Password"></span>
+                </div>
+
+                <div class="input-symbol">
+                    <input type="text" name="instagram" placeholder="Instagram" />
+                    <span class="icon-lock" title="Confirm Password"></span>
+                </div>
+
+                <button type="submit" class="btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+    </div>
 </template>
