@@ -1,13 +1,27 @@
 var ERRORS_KEY = 'addFeedErrors';
 
-Template.join.onCreated(function() {
+Template.addfeed.onCreated(function() {
     Session.set(ERRORS_KEY, {});
 });
 
-Template.join.helpers({
+Template.addfeed.helpers({
 
 });
 
-Template.feed.events({
-
+Template.addfeed.events({
+    'click .js-facebook': function() {
+        console.log("Facebook");
+    },
+    'click .js-twitter': function() {
+        console.log("Twitter");
+    },
+    'click .js-instagram': function() {
+        console.log("Instagram");
+    },
+    'click .js-tumblr': function() {
+        console.log("Tumblr");
+    },
+    'click .js-reddit': function() {
+        console.log("Reddit");
+    }
 });
