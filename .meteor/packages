@@ -23,3 +23,6 @@ splendido:accounts-meld
 accounts-facebook
 service-configuration
 
+meteorhacks:npm
+accounts-twitter
+accounts-ui

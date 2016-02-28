@@ -7,6 +7,7 @@ Template.join.onCreated(function() {
 });
 var getTweets = function (){
     var Twit = Meteor.npmRequire('twit');
+    //var returnData;
 
     var T = new Twit({
         consumer_key:         'DMJkS0WTvfofkoSt5bKGpQbXT', // API key
@@ -14,15 +15,20 @@ var getTweets = function (){
         access_token:         '171332224-RRM8w8Sy51ZlXXPZaztslMOpV1qy3ZfJGpOGtPAT',
         access_token_secret:  'TU5y8lt0AhjuNEYeQVUos4NCPTb5Nm6D6EtEGfD89874Z'
     });
-    //  search twitter for all tweets containing the word 'banana'
-    //  since Nov. 11, 2011
-    T.get(statuses/home_timeline, { count: 15 }, function(err, data, response) {
-        console.log(data)
-    });
-}
-console.log("Hello world");
-getTweets();
+    //  search twitter for the user's home_timeline
+    T.get('search/tweets',
+        {
+            q: 'banana since:2011-11-11',
+            count: 100
+        },
+        function(err, data, response) {
+            console.log(data);
+        }
+    );
 
+
+}
+getTweets();
 Template.join.helpers({
 
 });
