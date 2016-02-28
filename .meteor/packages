@@ -22,3 +22,8 @@ accounts-facebook
 splendido:accounts-meld
 service-configuration
 
+http
+meteorhacks:npm
+
+
+npm-container
