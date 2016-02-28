@@ -10,7 +10,6 @@ session
 mongo
 mobile-experience
 standard-minifiers
-insecure
 less
 iron:router@0.9.4
 accounts-password
@@ -18,12 +17,24 @@ jquery
 tracker
 check
 
-meteorhacks:npm
+
+
 accounts-twitter
 
 
 npm-container
-accounts-ui
+
 
 splendido:accounts-meld
+
+accounts-ui
+bootstrap
+accounts-facebook
+splendido:accounts-meld
+service-configuration
+
+http
+meteorhacks:npm
+
+
 

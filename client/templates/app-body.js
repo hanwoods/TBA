@@ -130,5 +130,9 @@ Template.appBody.events({
 
   'click .js-settings': function() {
     Router.go('settingsPage', {});
-  }
+  },
+
+    'click .js-test': function() {
+        Router.go('testFacebook', {});
+    }
 });
