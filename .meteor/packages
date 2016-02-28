@@ -19,3 +19,6 @@ check
 accounts-ui
 bootstrap
 accounts-facebook
+splendido:accounts-meld
+service-configuration
+
