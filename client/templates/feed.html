@@ -1,5 +1,17 @@
 <template name="feed">
     <div class="page feed">
-        <p class="subtitle-auth" >Feed</p>
+        <div><p class="subtitle-auth">Feed</p></div>
+        <div class="content-scrollable list-items" style="margin-top: 50px;">
+            <ul>
+                {{#each posts}}
+                    <li>
+                        <div style="margin-left: auto; margin-right: auto; width: 100%;">
+                            <p style="margin-top: 20px;">{{user.username}}</p>
+                            <img style="margin-top: 10px;" src="{{images.standard_resolution.url}}"/>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </template>

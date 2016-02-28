@@ -1,4 +1,5 @@
 var ERRORS_KEY = 'addFeedErrors';
+OAuth.initialize('r5LnsctW-k8nlkwUqVmCcSy3aN4');
 
 Template.addfeed.onCreated(function() {
     Session.set(ERRORS_KEY, {});
@@ -25,15 +26,54 @@ Template.addfeed.helpers({
 
 Template.addfeed.events({
     'click .js-facebook': function() {
+        OAuth.popup('facebook')
+            .done(function(result) {
+                //use result.access_token in your API request
+                //or use result.get|post|put|del|patch|me methods (see below)
+                console.log(result);
+                //Meteor.call("linkInstagramAccessToken", result.access_token);
+            })
+            .fail(function (err) {
+                //handle error with err
+            });
         console.log("Facebook");
     },
     'click .js-twitter': function() {
+        OAuth.popup('twitter')
+            .done(function(result) {
+                //use result.access_token in your API request
+                //or use result.get|post|put|del|patch|me methods (see below)
+                console.log(result);
+                Meteor.call("linkTwitterAccessToken", result.oauth_token);
+            })
+            .fail(function (err) {
+                //handle error with err
+            });
         console.log("Twitter");
     },
     'click .js-instagram': function() {
-        window.open("https://api.instagram.com/oauth/authorize/?client_id=2538a46adbf14c8b834785c78a7cd4b7&redirect_uri=http://localhost:3000/instagramauth&response_type=token", "_self");
+        OAuth.popup('instagram')
+            .done(function(result) {
+                //use result.access_token in your API request
+                //or use result.get|post|put|del|patch|me methods (see below)
+                console.log(result);
+                Meteor.call("linkInstagramAccessToken", result.access_token);
+            })
+            .fail(function (err) {
+                //handle error with err
+            });
     },
     'click .js-tumblr': function() {
+        OAuth.popup('tumblr')
+            .done(function(result) {
+                //use result.access_token in your API request
+                //or use result.get|post|put|del|patch|me methods (see below)
+                console.log(result);
+                Meteor.call("linkTumblrAccessToken", result.oauth_token);
+            })
+            .fail(function (err) {
+                //handle error with err
+            });
         console.log("Tumblr");
     },
     'click .js-reddit': function() {
