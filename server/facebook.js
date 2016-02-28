@@ -38,6 +38,9 @@ Meteor.methods({
     }
 });
 
+//fbFeedGetter = new FacebookFeedGetter();
+//fbFeedGetter.setup(access_token, FacebookPosts);
+
 Meteor.publish("getUserData", function () {
-    return this.query('me');
+    return this.query('user_posts');
 });

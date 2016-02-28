@@ -29,9 +29,9 @@ Template.feed.events({
     }
 });
 
-
 function loadFBPosts() {
     var fbPage = Session.get("fbPage");
+
 
     if (fbPage) {
         Meteor.call('getProcessedPagePosts', fbPage, MAX_RETRIEVED_POSTS, function (err, postsData) {
