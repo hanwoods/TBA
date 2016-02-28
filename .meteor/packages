@@ -18,14 +18,8 @@ jquery
 tracker
 check
 
-meteorhacks:npm
-accounts-twitter
-
-
-accounts-ui
-
 splendido:accounts-meld
 
+accounts-facebook
+service-configuration
 
-
-npm-container
