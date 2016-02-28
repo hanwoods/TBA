@@ -1,6 +1,6 @@
 <template name="listsShow">
   <div class="page lists-show">
-    <nav class="js-title-nav">
+    <!--<nav class="js-title-nav">
       {{#if editing}}
         <form class="js-edit-form list-edit-form">
           <input type="text" name="name" value="{{name}}">
@@ -48,7 +48,7 @@
         <input type="text" placeholder="Type to add new tasks">
         <span class="icon-add js-todo-add"></span>
       </form>
-    </nav>
+    </nav>-->
 
 
     <div class="content-scrollable list-items">
@@ -60,8 +60,7 @@
             {{> todosItem}}
           {{else}}
             <div class="wrapper-message">
-              <div class="title-message">No tasks here</div>
-              <div class="subtitle-message">Add new tasks using the field above</div>
+              <div class="title-message">No Posts</div>
             </div>
           {{/each}}
         {{/with}}

@@ -17,7 +17,7 @@ Template.listsShow.onRendered(function() {
     firstRender = false;
   }
 
-  this.find('.js-title-nav')._uihooks = {
+ /* this.find('.js-title-nav')._uihooks = {
     insertElement: function(node, next) {
       $(node)
         .hide()
@@ -29,7 +29,7 @@ Template.listsShow.onRendered(function() {
         this.remove();
       });
     }
-  };
+  };*/
 });
 
 Template.listsShow.helpers({
