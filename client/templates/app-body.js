@@ -126,5 +126,9 @@ Template.appBody.events({
     list._id = Lists.insert(list);
 
     Router.go('listsShow', list);
+  },
+
+  'click .js-settings': function() {
+    Router.go('settingsPage', {});
   }
 });
