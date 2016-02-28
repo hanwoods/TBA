@@ -175,36 +175,3 @@ Template.listsShow.events({
 });
 
 
-var getTweets = function () {
-  var Twit = Meteor.npmRequire('twit');
-
-  var T = new Twit({
-    consumer_key:         'DMJkS0WTvfofkoSt5bKGpQbXT', // API key
-    consumer_secret:      'CbQQ6PABc0fqcE2wao0exg0wliytCIKjd1zOCjEAT91TbTnrNw', // API secret
-    access_token:         '171332224-RRM8w8Sy51ZlXXPZaztslMOpV1qy3ZfJGpOGtPAT',
-    access_token_secret:  'TU5y8lt0AhjuNEYeQVUos4NCPTb5Nm6D6EtEGfD89874Z'
-  });
-
-  T.get
-
-  if (Meteor.isServer) {
-    Meteor.startup(function () {
-      // code to run on server at startup
-
-
-
-      //  search twitter for all tweets containing the word 'banana'
-      //  since Nov. 11, 2011
-      T.get('search/tweets',
-          {
-            q: 'banana since:2011-11-11',
-            count: 100
-          },
-          function(err, data, response) {
-            console.log(data);
-          }
-      );
-
-    });
-  }
-}

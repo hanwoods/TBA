@@ -22,8 +22,10 @@ meteorhacks:npm
 accounts-twitter
 
 
-npm-container
 accounts-ui
 
 splendido:accounts-meld
 
+
+
+npm-container
